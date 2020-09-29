@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.66;
+}
+
+#plocha {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 100vw;
+  background-color: lightgray;
+  text-align: center;
+}
+
+#plocha #head {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+#plocha #head header {
+  font-size: 2rem;
+}
+
+#plocha #head #volna {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#plocha #head H1 {
+  font-size: 3rem;
+}
+
+#plocha form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: #839df3;
+  border-radius: 15px;
+  padding-bottom: 2rem;
+  border: solid #616060 0.2rem;
+}
+
+#plocha form H3 {
+  font-size: 2rem;
+}
+
+#plocha form #submit {
+  width: 60%;
+  margin: auto;
+  font-size: 1.5rem;
+  border: solid darkgray 0.2rem;
+  border-radius: 10px;
+}
+
+#plocha form button:hover {
+  background-color: #45b84f;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#plocha form .terms {
+  position: relative;
+}
+
+#plocha form .terms .date1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  background-color: lightskyblue;
+  border: solid 0.2rem #616060;
+  border-radius: 0.7rem;
+  margin: auto;
+  margin-bottom: 0.4rem;
+  width: 65%;
+}
+
+#plocha form .terms .date1 input {
+  left: 10rem;
+  position: absolute;
+}
+
+#plocha form .terms .date1 input [type="radio"] {
+  font-size: 3rem;
+}
+
+#plocha form .form1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  position: relative;
+}
+
+#plocha form .form2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 1.5rem 1rem 1rem 0rem;
+  margin-bottom: 4rem;
+}
+
+#plocha form .form2 textarea {
+  border: solid #727070 0.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  width: 15rem;
+  left: 7.5rem;
+}
+
+#plocha form input {
+  position: absolute;
+  left: 7.5rem;
+  width: 15rem;
+  border: solid 0.2rem #727070;
+  border-radius: 10px;
+}
+
+#plocha form input[type="text"] {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#plocha form input[type="tel"] {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#plocha form input[type="email"] {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#plocha form label {
+  font-size: 1.3rem;
+  margin: 0.3rem;
+}
+
+#plocha form #agree {
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: lightskyblue;
+  max-width: 95%;
+  border: solid 0.2rem #727272;
+  border-radius: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-bottom: 1rem;
+}
+
+#plocha form #agree #souhlas {
+  position: absolute;
+  left: 85%;
+  width: 3rem;
+}
+
+#plocha form #agree label {
+  margin: auto;
+  padding: 0;
+  width: 88%;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  #heada {
+    font-size: 1.3rem;
+  }
+  .text {
+    font-size: 1.3rem;
+  }
+  #text1 {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+  }
+  #pocet {
+    font-size: 2rem;
+  }
+  form {
+    width: 25rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  input {
+    max-width: 50%;
+    left: 7.5rem;
+  }
+  textarea {
+    max-width: 50%;
+    left: 7.5rem;
+  }
+  #heada {
+    max-height: 30%;
+  }
+  .form2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0rem 1rem 0.7rem 0rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  form {
+    max-width: 100%;
+  }
+}
+
+#page {
+  height: 100vh;
+  background-color: lightgray;
+}
+
+#page #sucess {
+  background-color: #1bb11b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: solid darkgray 0.2rem;
+  position: relative;
+  top: 20%;
+}
+/*# sourceMappingURL=style.css.map */

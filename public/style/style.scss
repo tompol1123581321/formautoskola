@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.66;
+}
+//font variables
+$bigfs: 3rem;
+$medfs: 2rem;
+$smallfs: 1rem;
+
+#plocha {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 100vw;
+  background-color: lightgray;
+  text-align: center;
+  #head {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    header {
+      font-size: $medfs;
+    }
+    #volna {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    H1 {
+      font-size: $bigfs;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: fit-content;
+    margin: auto;
+    background-color: rgb(131, 157, 243);
+    border-radius: 15px;
+    padding-bottom: 2rem;
+    border: solid rgb(97, 96, 96) 0.2rem;
+    H3 {
+      font-size: $medfs;
+    }
+    #submit {
+      width: 60%;
+      margin: auto;
+      font-size: 1.5rem;
+      border: solid darkgray 0.2rem;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: rgb(69, 184, 79);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    .terms {
+      position: relative;
+      .date1 {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        background-color: lightskyblue;
+        border: solid 0.2rem rgb(97, 96, 96);
+        border-radius: 0.7rem;
+        margin: auto;
+        margin-bottom: 0.4rem;
+        width: 65%;
+        input {
+          left: 10rem;
+          position: absolute;
+        }
+        input [type="radio"] {
+          font-size: $bigfs;
+        }
+      }
+    }
+    .form1 {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      position: relative;
+    }
+    .form2 {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+      padding: 1.5rem 1rem 1rem 0rem;
+      margin-bottom: 4rem;
+      textarea {
+        border: solid rgb(114, 112, 112) 0.2rem;
+        border-radius: 10px;
+        font-size: $smallfs;
+        font-weight: bold;
+        position: absolute;
+        width: 15rem;
+        left: 7.5rem;
+      }
+    }
+    input {
+      position: absolute;
+      left: 7.5rem;
+      width: 15rem;
+      border: solid 0.2rem rgb(114, 112, 112);
+      border-radius: 10px;
+    }
+    input[type="text"] {
+      font-size: $smallfs;
+      font-weight: bold;
+    }
+    input[type="tel"] {
+      font-size: $smallfs;
+      font-weight: bold;
+    }
+    input[type="email"] {
+      font-size: $smallfs;
+      font-weight: bold;
+    }
+    label {
+      font-size: 1.3rem;
+      margin: 0.3rem;
+    }
+    #agree {
+      margin: auto;
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: lightskyblue;
+      max-width: 95%;
+      border: solid 0.2rem rgb(114, 114, 114);
+      border-radius: 0.5rem;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 1rem;
+      #souhlas {
+        position: absolute;
+        left: 85%;
+        width: 3rem;
+      }
+      label {
+        margin: auto;
+        padding: 0;
+        width: 88%;
+        text-align: left;
+      }
+    }
+  }
+}
+//media (responsivness)
+@media (max-width: 700px) {
+  #heada {
+    font-size: 1.3rem;
+  }
+  .text {
+    font-size: 1.3rem;
+  }
+  #text1 {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+  }
+  #pocet {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 25rem;
+    height: fit-content;
+  }
+  input {
+    max-width: 50%;
+    left: 7.5rem;
+  }
+  textarea {
+    max-width: 50%;
+    left: 7.5rem;
+  }
+  #heada {
+    max-height: 30%;
+  }
+  .form2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 0rem 1rem 0.7rem 0rem;
+  }
+}
+@media (max-width: 25rem) {
+  form {
+    max-width: 100%;
+  }
+}
+//sucess page
+#page {
+  height: 100vh;
+  background-color: lightgray;
+  #sucess {
+    background-color: rgb(27, 177, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: solid darkgray 0.2rem;
+    position: relative;
+    top: 20%;
+  }
+}
