@@ -4,7 +4,7 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
 const { toNamespacedPath, format } = require("path");
-const { getMaxListeners } = require("process");
+const { getMaxListeners, send } = require("process");
 const { error } = require("console");
 
 const app = express();
@@ -13,12 +13,10 @@ const app = express();
 app.engine(
   "handlebars",
   exphbs({
-    layoutsDir: __dirname + "/views/layouts",
+    defaultLayout: "main",
   })
 );
-
 app.set("view engine", "handlebars");
-
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -63,13 +61,10 @@ app.post("/send", (req, res) => {
     if (error) {
       return console.log(error);
     }
-
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   });
-  form.addEventListener("submit", () => {
-    window.open("127.0.0.1:5500/sent.html");
-  });
+  res.sendFile(path.join(__dirname, "public", "sucess.html"));
 });
 
 app.listen(3000, () => console.log("server started..."));
