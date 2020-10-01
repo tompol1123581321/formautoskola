@@ -40,19 +40,19 @@ app.post("/send", (req, res) => {
   <H3>Poznámky:</H3>
    ${req.body.note1}`;
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "gmail",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "drake.grady@ethereal.email", // generated ethereal user
-      pass: "W5s5KMkMeGjRjgjZCm", // generated ethereal password
+      user: "tom.polivka96@gmail.com", // generated ethereal user
+      pass: "Trolol321", // generated ethereal password
     },
   });
 
   // send mail with defined transport object
   let mailOptions = {
-    from: '"Tomas Polivka" <drake.grady@ethereal.email>', // sender address
-    to: "sarka, <drake.grady@ethereal.email> ", // list of receivers
+    from: '"Tomas Polivka" <tom.polivka96@gmail.com>', // sender address
+    to: "sarka, <hlavasarka@seznam.cz> ", // list of receivers
     subject: "Nová rezervace", // Subject line
     text: "Nová rezervace na řidičský kurz B", // plain text body
     html: output, // html body
