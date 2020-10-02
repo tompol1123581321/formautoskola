@@ -67,4 +67,4 @@ app.post("/send", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "sucess.html"));
 });
 
-app.listen(3000, () => console.log("server started..."));
+app.listen(process.env.PORT || 5000);
