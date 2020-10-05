@@ -15,7 +15,7 @@ $smallfs: 1rem;
   min-height: 100vh;
   margin: auto;
   max-width: 100vw;
-  background-color: "http://www.hlavacekautoskola.cz/uvod_files/pozadi3.gif";
+  background-image: url("/public/pozadi3.gif");
   text-align: center;
   #head {
     font-size: 3rem;
@@ -195,7 +195,7 @@ $smallfs: 1rem;
 //sucess page
 #page {
   height: 100vh;
-  background-color: "http://www.hlavacekautoskola.cz/uvod_files/pozadi3.gif";
+  background-image: url("/public/pozadi3.gif");
   #sucess {
     background-color: rgb(27, 177, 27);
     display: flex;
