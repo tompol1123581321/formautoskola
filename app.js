@@ -41,19 +41,19 @@ app.post("/send", (req, res) => {
   <H3>Poznámky:</H3>
    ${req.body.note1}`
 	let transporter = nodemailer.createTransport({
-		host: "smtp.seznam.cz",
+		host: process.env.SMTP_HOST,
 		port: 465,
 		secure: true, // true for 465, false for other ports
 		auth: {
-			user: "tom.polivka96@seznam.cz", // generated ethereal user
-			pass: "Trolol321", // generated ethereal password
+			user: process.env.SMTP_USERNAME, // generated ethereal user
+			pass: process.env.SMTP_PASSWORD, // generated ethereal password
 		},
 	})
 
 	// send mail with defined transport object
 	let mailOptions = {
-		from: '"Tomas Polivka" <tom.polivka96@seznam.cz>', // sender address
-		to: "sarka, <autoskola.hlavacek@seznam.cz>", // list of receivers
+		from: `Tomas Polivka, ${process.env.SMTP_USERNAME}`, // sender address
+		to: `Autoskola, ${process.env.SMTP_ADDRESSED} `, // list of receivers
 		subject: "Nová rezervace", // Subject line
 		text: "Nová rezervace na řidičský kurz B", // plain text body
 		html: output, // html body
