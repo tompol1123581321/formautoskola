@@ -1,4 +1,4 @@
-HEAD
+
 const express = require("express")
 const bodyParser = require("body-parser")
 const path = require("path")
@@ -7,6 +7,7 @@ const nodemailer = require("nodemailer")
 const { toNamespacedPath, format } = require("path")
 const { getMaxListeners, send } = require("process")
 const { error } = require("console")
+require('dotenv').config()
 
 const app = express()
 
@@ -45,8 +46,8 @@ app.post("/send", (req, res) => {
 		port: 465,
 		secure: true, // true for 465, false for other ports
 		auth: {
-			user: process.env.SMTP_USERNAME, // generated ethereal user
-			pass: process.env.SMTP_PASSWORD, // generated ethereal password
+			user: process.env.SMTP_USERNAME, //testing accounts; my own; for actual changes change ports, SMTP and SMTP addressed
+			pass: process.env.SMTP_PASSWORD, 
 		},
 	})
 
@@ -69,7 +70,4 @@ app.post("/send", (req, res) => {
 })
 
 let port = process.env.PORT
-if (port == null || port == "") {
-	port = 8000
-}
 app.listen(port)
